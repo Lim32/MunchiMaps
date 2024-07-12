@@ -1,0 +1,51 @@
+Website
+- Logo:
+    MunchiMap on the left corner of the website.
+
+- Map:
+    We used open street view to display our map and our locations. 
+    Map encapsulates the whole RPI campus. 
+    There are pins color coded grey (snacks) and blue (drinks).
+    Each pins displays name, card, tap, and cash.  
+
+
+- Task bar:
+    * Search:
+        Search building names:
+            
+            "Folsom Library"
+            "Sharp Hall"
+            "Rensselaer Student Union"
+            "Quadrangle Complex"
+            "Darrin Communication Center"
+            "Woorhees Computing Center"
+            "Amos Eaton Hall"
+            "Mueller Center"
+            "j Erik Jonsson Engineering Center"
+            "Russell Sage Laboratory"
+            "Jonsson-Rowland Science Center"
+            "Pittsburgh Building"
+            "Warren Hall"
+            "Greene Building"
+            "Davison Hall"
+            "RPI Public Safety"
+            "North Hall"
+            "West Hall"
+
+        The search bar takes in a strings input and displays building names containing the input.
+
+        Example: 
+        input: "f"
+        output: "Folsom Library"
+
+    * Report:
+        // In-progress
+
+    * Review:
+        // In-progress
+
+    * Location:
+        Reconfigure current location
+
+- How To Use button:
+    Displays the instruction to use the website
