@@ -33,7 +33,6 @@ html, body {
     outline: 4px solid rgba(255, 255, 255, 1); /* 3px white stroke */
   }
 
- 
   .button {
    
     padding: 5px 40px;
@@ -95,7 +94,6 @@ html, body {
     border-radius: 50px;
 }
 
-
  /* Styles for the help popup */
 .help-popup {
   display: none; /* Hidden by default */
@@ -108,6 +106,8 @@ html, body {
   overflow: auto; 
   background-color: rgb(0,0,0); 
   background-color: rgba(0,0,0,0.4); 
+  font-family: 'Courier New'; 
+
 }
 
 .help-content {
@@ -117,6 +117,10 @@ html, body {
   border: 1px solid #888;
   width: 80%; 
   max-width: 600px; 
+  font-family: 'Courier New'; 
+  border-radius: 20px;
+
+
 }
 
 .close {
@@ -148,6 +152,73 @@ html, body {
   height: 30px;
   margin-right: 10px;
 }
+
+/* Map Key Button */
+.map-key-button {
+  position: absolute;
+  top: 5px;
+  right: 80px; /* Adjusted position to avoid overlap with help button */
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.0); /* Transparent background */
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease; /* Smooth animation */
+}
+
+.map-key-button:hover {
+  transform: scale(1.1); /* Increase button size on hover */
+}
+
+.map-key-button:active {
+  transform: translateY(2px); /* Slightly move down on click */
+}
+
+.map-key-button-img {
+  height: 30px; /* Adjust image height */
+  width: auto; /* Maintain aspect ratio */
+  background-color: #FFFFFF;
+  border-radius: 50px;
+}
+
+/* Map Key Popup */
+.map-key-popup {
+  display: none; /* Hidden by default */
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
+  font-family: 'Courier New';
+}
+
+.map-key-content {
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+  max-width: 600px; 
+  border-radius: 20px;
+  font-family: 'Courier New';
+}
+
+.map-key-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.map-key-close:hover,
+.map-key-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 
 
   /* For popups from buttons at bottom of screen */
@@ -278,6 +349,8 @@ html, body {
     display: flex;
   }
 
+
+
   /* The green icons inside the info window */
   .info-window-icons img {
     height: 30px; 
@@ -337,8 +410,14 @@ html, body {
     border-radius: 5px;
   }
   
-  .submit-review .rating {
-    margin-bottom: 10px;
+  .rating{
+    display:flex;
+    flex-direction:row-reverse;
+  }
+  .rating span {
+    cursor: pointer;
+    transition: color .3s, transform .3s;
+    font-size:30px;
   }
   
   .submit-review button {
@@ -421,7 +500,84 @@ html, body {
 .result ul li a:hover {
     text-decoration: underline;
 }
-   
+
+<style>
+/*report button*/
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.popup {
+  background: #fff;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.popup-header h2 {
+  margin: 0;
+}
+
+.popup-close {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.popup-form .form-group {
+  margin-bottom: 15px;
+}
+
+.popup-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.popup-form .form-control {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.popup-form .form-control:focus {
+  outline: none;
+  border-color: #007BFF;
+}
+
+.btn-submit {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+}
+</style> 
   
 
    
